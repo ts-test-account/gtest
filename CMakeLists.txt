@@ -6,4 +6,5 @@ add_executable(Main
   ship.cc
   myfunc.h
   ship.h
+  characterParameter.h
 )
