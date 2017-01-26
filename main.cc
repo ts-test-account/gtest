@@ -5,6 +5,7 @@
 #include <array>
 #include "ship.h"
 #include "myfunc.h"
+#include "characterParameter.h"
 
 int chooseShip( )
 {
