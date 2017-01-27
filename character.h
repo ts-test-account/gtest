@@ -8,7 +8,7 @@
 #ifndef GAMETEST_CHARACTER_H_
 #define GAMETEST_CHARACTER_H_
 
-#include <characterParameter.h>
+#include "characterParameter.h"
 
 class Character;
 typedef std::shared_ptr<Character> ChrRef;
