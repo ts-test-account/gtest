@@ -1,5 +1,5 @@
-#ifndef __Rougelike__characterParameter__
-#define __Rougelike__characterParameter__
+#ifndef GAMETEST_CHARACTER_PARAMETER_H_
+#define GAMETEST_CHARACTER_PARAMETER_H_
 
 //キャラクターデータの構造体
 struct StatusData {
@@ -36,5 +36,5 @@ static const StatusData statusdatabase[] = {
     {15,"蛇",10,0,20,20,0,0,0,0, 1}
 };
 
-#endif /* defined(__Rougelike__characterParameter__) */
+#endif /* defined(GAMETEST_CHARACTER_PARAMETER_H_) */
 
