@@ -111,6 +111,30 @@ Main/fast:
 	$(MAKE) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/build
 .PHONY : Main/fast
 
+character.o: character.cc.o
+.PHONY : character.o
+
+# target to build an object file
+character.cc.o:
+	$(MAKE) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/character.cc.o
+.PHONY : character.cc.o
+
+character.i: character.cc.i
+.PHONY : character.i
+
+# target to preprocess a source file
+character.cc.i:
+	$(MAKE) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/character.cc.i
+.PHONY : character.cc.i
+
+character.s: character.cc.s
+.PHONY : character.s
+
+# target to generate assembly for a file
+character.cc.s:
+	$(MAKE) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/character.cc.s
+.PHONY : character.cc.s
+
 main.o: main.cc.o
 .PHONY : main.o
 
@@ -192,6 +216,9 @@ help:
 	@echo "... Main"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... character.o"
+	@echo "... character.i"
+	@echo "... character.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
