@@ -8,6 +8,7 @@
 #ifndef GAMETEST_CHARACTER_H_
 #define GAMETEST_CHARACTER_H_
 
+#include <memory>
 #include "characterParameter.h"
 
 class Character;
