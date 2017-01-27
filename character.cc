@@ -7,4 +7,3 @@
 //
 
 #include "character.h"
-#include "characterParameter.h"
