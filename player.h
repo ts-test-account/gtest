@@ -1,6 +1,5 @@
 //
 //  player.h
-//  rougelike
 //
 //  Created by 白川 岳史 on 2015/06/29.
 //  Copyright (c) 2015年 白川 岳史. All rights reserved.
@@ -9,18 +8,17 @@
 #ifndef GAMETEST_PLAYER_H_
 #define GAMETEST_PLAYER_H_
 
+#include "character.h"
 
 class Player : public Character {
     
 public:
     //コンストラクタ
-    Player():status(statusdatabase[0]){}
-    
+    Player();
     //引数付きコンストラクタ
-    Player (const StatusData& statusdata){}
-    
+    Player (const StatusData& statusdata);
     //デストラクタ
-    virtual ~Player (){
+    virtual ~Player ();
     
     //ゲッター、セッターが必要か再検討
 
@@ -30,7 +28,6 @@ public:
     void choicePersonalAction();
     void choiceTarget();
     void viewUseableSkill();
-
 };
 
 #endif /* defined(GAMETEST_PLAYER_H_) */

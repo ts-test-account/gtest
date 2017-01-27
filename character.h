@@ -21,13 +21,13 @@ protected:
     
 public:
     //コンストラクタ
-    Character():status(statusdatabase[0]){}
+    Character();
     
     //引数付きコンストラクタ
-    Character (const StatusData& st) :status(st){}
+    Character (const StatusData& st);
     
     //デストラクタ
-    virtual ~Character (){}
+    virtual ~Character();
     
     //ここにゲッター、セッターが必要か再検討
 

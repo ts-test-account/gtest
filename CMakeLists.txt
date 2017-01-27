@@ -9,4 +9,6 @@ add_executable(Main
   characterParameter.h
   character.h
   character.cc
+  player.h
+  player.cc
 )
