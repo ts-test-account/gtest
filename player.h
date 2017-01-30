@@ -19,15 +19,7 @@ public:
     Player (const StatusData& statusdata);
     //デストラクタ
     virtual ~Player ();
-    
-    //ゲッター、セッターが必要か再検討
 
-    //戦闘処理用関数
-    void attack(ChrRef target);
-    void attacked(int n);
-    void choicePersonalAction();
-    void choiceTarget();
-    void viewUseableSkill();
 };
 
 #endif /* defined(GAMETEST_PLAYER_H_) */

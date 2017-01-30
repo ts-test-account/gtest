@@ -1,71 +1,22 @@
 //
 //  player.cc
 //
-//  Created by ”’ì Šxj on 2015/06/29.
-//  Copyright (c) 2015”N ”’ì Šxj. All rights reserved.
+//  Created by ï¿½ï¿½ï¿½ï¿½ ï¿½xï¿½j on 2015/06/29.
+//  Copyright (c) 2015ï¿½N ï¿½ï¿½ï¿½ï¿½ ï¿½xï¿½j. All rights reserved.
 //
 
 #include "player.h"
 
 
-//ƒRƒ“ƒXƒgƒ‰ƒNƒ^
+//ï¿½Rï¿½ï¿½ï¿½Xï¿½gï¿½ï¿½ï¿½Nï¿½^
 Player::Player():Character(statusdatabase[0]){
 }
 
-//ˆø”•t‚«ƒRƒ“ƒXƒgƒ‰ƒNƒ^
+//ï¿½ï¿½ï¿½ï¿½ï¿½tï¿½ï¿½ï¿½Rï¿½ï¿½ï¿½Xï¿½gï¿½ï¿½ï¿½Nï¿½^
 Player::Player (const StatusData& statusdata):Character(statusdata){
 }
 
-//ƒfƒXƒgƒ‰ƒNƒ^
+//ï¿½fï¿½Xï¿½gï¿½ï¿½ï¿½Nï¿½^
 virtual Player::~Player (){
 }
-
-//ƒvƒŒƒCƒ„[‚ÌUŒ‚
-void Player::attack(ChrRef target) {
-    std::cout << name <<"‚ÌUŒ‚" << std::endl;
-    
-    int damagepoint = dunRand(1, getStr()) - target->getAc();
-
-    //UŒ‚’l‚ªƒ[ƒˆÈ‰º‚É‚È‚éê‡‚Í1‚É‚·‚é
-    if (damagepoint <= 0) {
-        damagepoint = 1;
-    }
-    std::cout << target->getName() << "‚É" << damagepoint << "‚Ìƒ_ƒ[ƒW" << std::endl;
-    target->attacked(damagepoint);
-}
-
-//ƒvƒŒƒCƒ„[‚ªUŒ‚‚ğó‚¯‚é
-void Player::attacked(int n) {
-    setHp(getHp() - n);
-    
-    if (getHp() <= 0) {
-        std::cout << name <<"‚Í“|‚ê‚½" << std::endl;
-    }
-}
-
-//‹Z‚ğ‘I‘ğ
-void Player::choicePersonalAction(){
-    std::cout << this->name << "‚Ì‹Z‚ğ‘I‘ğ‚µ‚Ä‰º‚³‚¢" << std::endl;
-    std::cin >> this->personalaction;
-}
-
-//ƒ^[ƒQƒbƒg‚ğ‘I‘ğ
-void Player::choiceTarget(){
-    std::cout << this->name << "‚Ìƒ^[ƒQƒbƒg‚ğ‘I‘ğ‚µ‚Ä‰º‚³‚¢" << std::endl;
-    std::cin >> this->target;
-}
-
-//g—p‰Â”\‚È‹Z‚ğ•\¦‚·‚é
-void Player::viewUseableSkill(){
-    //‘Sƒrƒbƒg‚ğƒXƒLƒƒƒ“
-    int tokugiindex = 0;
-    for (int i = 1; i != 0; i <<= 1){
-        if ((skill & i) != 0) {
-            std::cout << actions[tokugiindex].id << ":" << actions[tokugiindex].name << std::endl;
-        }
-        tokugiindex++;
-    }
-
-}
-
 
