@@ -183,6 +183,30 @@ myfunc.cc.s:
 	$(MAKE) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/myfunc.cc.s
 .PHONY : myfunc.cc.s
 
+player.o: player.cc.o
+.PHONY : player.o
+
+# target to build an object file
+player.cc.o:
+	$(MAKE) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/player.cc.o
+.PHONY : player.cc.o
+
+player.i: player.cc.i
+.PHONY : player.i
+
+# target to preprocess a source file
+player.cc.i:
+	$(MAKE) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/player.cc.i
+.PHONY : player.cc.i
+
+player.s: player.cc.s
+.PHONY : player.s
+
+# target to generate assembly for a file
+player.cc.s:
+	$(MAKE) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/player.cc.s
+.PHONY : player.cc.s
+
 ship.o: ship.cc.o
 .PHONY : ship.o
 
@@ -225,6 +249,9 @@ help:
 	@echo "... myfunc.o"
 	@echo "... myfunc.i"
 	@echo "... myfunc.s"
+	@echo "... player.o"
+	@echo "... player.i"
+	@echo "... player.s"
 	@echo "... ship.o"
 	@echo "... ship.i"
 	@echo "... ship.s"

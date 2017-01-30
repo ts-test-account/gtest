@@ -18,7 +18,7 @@ public:
     //引数付きコンストラクタ
     Player (const StatusData& statusdata);
     //デストラクタ
-    virtual ~Player ();
+    ~Player ();
 
 };
 

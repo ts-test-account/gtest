@@ -27,7 +27,7 @@ public:
     Character (const StatusData& st);
     
     //デストラクタ
-    virtual ~Character();
+    ~Character();
     
     //ここにゲッター、セッターが必要か再検討
 

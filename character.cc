@@ -14,5 +14,4 @@ Character::Character():status(statusdatabase[0]){}
 Character::Character(const StatusData& st):status(st){}
 
 //デストラクタ
-virtual Character::~Character (){}
-
+Character::~Character(){}

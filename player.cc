@@ -17,6 +17,5 @@ Player::Player (const StatusData& statusdata):Character(statusdata){
 }
 
 //�f�X�g���N�^
-virtual Player::~Player (){
-}
+Player::~Player (){}
 
