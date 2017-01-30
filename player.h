@@ -19,6 +19,8 @@ public:
     Player (const StatusData& statusdata);
     //デストラクタ
     ~Player ();
+    
+    void getNumber();
 
 };
 

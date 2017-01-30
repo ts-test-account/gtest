@@ -35,5 +35,8 @@ int main( ){
     
     test_ship.showType( );
     
+    Player testplayer;
+    testplayer.getNumber
+    
     return 0;
 }

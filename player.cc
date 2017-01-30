@@ -19,3 +19,6 @@ Player::Player (const StatusData& statusdata):Character(statusdata){
 //�f�X�g���N�^
 Player::~Player (){}
 
+void Player::getNumber(){
+    std::cout << status[0] << std::endl;
+}
