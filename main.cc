@@ -6,6 +6,7 @@
 #include "ship.h"
 #include "myfunc.h"
 #include "characterParameter.h"
+#include "player.h"
 
 int chooseShip( )
 {
@@ -36,7 +37,7 @@ int main( ){
     test_ship.showType( );
     
     Player testplayer;
-    testplayer.getNumber
+    testplayer.getNumber();
     
     return 0;
 }

@@ -6,6 +6,7 @@
 //
 
 #include "player.h"
+#include <iostream>
 
 
 //�R���X�g���N�^
@@ -20,5 +21,5 @@ Player::Player (const StatusData& statusdata):Character(statusdata){
 Player::~Player (){}
 
 void Player::getNumber(){
-    std::cout << status[0] << std::endl;
+    std::cout << status.id << std::endl;
 }
