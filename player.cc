@@ -25,23 +25,26 @@ void Player::getNumber(){
     std::cout << status.id << std::endl;
 }
 
+//アタックポイントの算出
+int Player::calculateAttackPoint(){
+    return BattleRand(1, status.str);
+}
+
 //プレイヤーの攻撃
 void Player::attack(ChrRef target) {
     std::cout << status.name <<"の攻撃" << std::endl;
-    
-    int damagepoint = BattleRand(1, status.str) - target->getAc();
+    target->attacked(calculateAttackPoint());
+}
 
+//プレイヤーが攻撃を受ける
+void Player::attacked(int n) {
+
+    status.hp = status.hp - 
     //攻撃値がゼロ以下になる場合は1にする
     if (damagepoint <= 0) {
         damagepoint = 1;
     }
     std::cout << target->getName() << "に" << damagepoint << "のダメージ" << std::endl;
-    target->attacked(damagepoint);
-}
-
-//プレイヤーが攻撃を受ける
-void Player::attacked(int n) {
-    setHp(getHp() - n);
     
     if (getHp() <= 0) {
         std::cout << name <<"は倒れた" << std::endl;
