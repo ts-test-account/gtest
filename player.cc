@@ -27,7 +27,7 @@ void Player::getNumber(){
 
 //プレイヤーの攻撃
 void Player::attack(ChrRef target) {
-    std::cout << name <<"の攻撃" << std::endl;
+    std::cout << status.name <<"の攻撃" << std::endl;
     
     int damagepoint = BattleRand(1, status.str) - target->getAc();
 
