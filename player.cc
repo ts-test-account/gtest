@@ -25,25 +25,30 @@ void Player::getNumber(){
     std::cout << status.id << std::endl;
 }
 
-//アタックポイントの算出
+//攻撃値の算出
 int Player::calculateAttackPoint(){
     return BattleRand(1, status.str);
 }
 
-//プレイヤーの攻撃
+//プレイヤーの攻撃処理
 void Player::attack(ChrRef target) {
     std::cout << status.name <<"の攻撃" << std::endl;
     target->attacked(calculateAttackPoint());
 }
 
+//ダメージ値の算出
+int Player::calculateDamagePoint(int attackpoint){
+    int damagepoint = status.ac - attackpoint;
+    if (damagepoint <= 0) {
+        return 1;
+    }
+    return damagepoint;
+}
+
 //プレイヤーが攻撃を受ける
 void Player::attacked(int n) {
 
-    status.hp = status.hp - 
-    //攻撃値がゼロ以下になる場合は1にする
-    if (damagepoint <= 0) {
-        damagepoint = 1;
-    }
+    status.hp = status.hp - calculateDamagePoint(n); 
     std::cout << target->getName() << "に" << damagepoint << "のダメージ" << std::endl;
     
     if (getHp() <= 0) {
@@ -51,27 +56,27 @@ void Player::attacked(int n) {
     }
 }
 
-//技を選択
-void Player::choicePersonalAction(){
-    std::cout << this->name << "の技を選択して下さい" << std::endl;
-    std::cin >> this->personalaction;
-}
+// //技を選択
+// void Player::choicePersonalAction(){
+//     std::cout << this->name << "の技を選択して下さい" << std::endl;
+//     std::cin >> this->personalaction;
+// }
 
-//ターゲットを選択
-void Player::choiceTarget(){
-    std::cout << this->name << "のターゲットを選択して下さい" << std::endl;
-    std::cin >> this->target;
-}
+// //ターゲットを選択
+// void Player::choiceTarget(){
+//     std::cout << this->name << "のターゲットを選択して下さい" << std::endl;
+//     std::cin >> this->target;
+// }
 
-//使用可能な技を表示する
-void Player::viewUseableSkill(){
-    //全ビットをスキャン
-    int tokugiindex = 0;
-    for (int i = 1; i != 0; i <<= 1){
-        if ((skill & i) != 0) {
-            std::cout << actions[tokugiindex].id << ":" << actions[tokugiindex].name << std::endl;
-        }
-        tokugiindex++;
-    }
+// //使用可能な技を表示する
+// void Player::viewUseableSkill(){
+//     //全ビットをスキャン
+//     int tokugiindex = 0;
+//     for (int i = 1; i != 0; i <<= 1){
+//         if ((skill & i) != 0) {
+//             std::cout << actions[tokugiindex].id << ":" << actions[tokugiindex].name << std::endl;
+//         }
+//         tokugiindex++;
+//     }
 
-}
+// }

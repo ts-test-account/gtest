@@ -22,15 +22,13 @@ public:
     
     //テスト用関数 後で削除
     void getNumber();
-
-    //アタックポイントの算出
     int calculateAttackPoint();
-
     void attack(ChrRef target);
+    int calculateDamagePoint(int attackpoint);
     void attacked(int n); //子クラスの関数が引数を持つ場合、純粋仮想関数にも同じ引数を持たせる必要がある？
-    void choicePersonalAction();
-    void choiceTarget();
-    void viewUseableSkill();
+    // void choicePersonalAction();
+    // void choiceTarget();
+    // void viewUseableSkill();
 };
 
 #endif /* defined(GAMETEST_PLAYER_H_) */
