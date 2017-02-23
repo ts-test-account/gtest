@@ -11,4 +11,8 @@ add_executable(Main
   character.cc
   player.h
   player.cc
+  enemy.h
+  enemy.cc
+  battle.h
+  battle.cc
 )
