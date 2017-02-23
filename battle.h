@@ -8,9 +8,9 @@
 #ifndef GAMETEST_BATTLE_H_
 #define GAMETEST_BATTLE_H_
 
-#include "character.h"
+#include <vector>
 
-class Battle : public Character {
+class Battle{
 
 public:
     //コンストラクタ
