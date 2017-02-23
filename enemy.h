@@ -1,27 +1,25 @@
 //
-//  player.h
+//  enemy.h
 //
 //  Created by 白川 岳史 on 2015/06/29.
 //  Copyright (c) 2015年 白川 岳史. All rights reserved.
 //
 
-#ifndef GAMETEST_PLAYER_H_
-#define GAMETEST_PLAYER_H_
+#ifndef GAMETEST_ENEMY_H_
+#define GAMETEST_ENEMY_H_
 
 #include "character.h"
 
-class Player : public Character {
+class Enemy : public Character {
 
 public:
     //コンストラクタ
-    Player();
+    Enemy();
     //引数付きコンストラクタ
-    Player (const StatusData& statusdata);
+    Enemy (const StatusData& statusdata);
     //デストラクタ
-    ~Player ();
+    ~Enemy ();
     
-    //テスト用関数 後で削除
-    void getNumber();
     int calculateAttackPoint();
     void attack(ChrRef target);
     int calculateDamagePoint(int attackpoint);
@@ -31,5 +29,5 @@ public:
     // void viewUseableSkill();
 };
 
-#endif /* defined(GAMETEST_PLAYER_H_) */
+#endif /* defined(GAMETEST_ENEMY_H_) */
 
