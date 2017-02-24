@@ -21,10 +21,6 @@ Enemy::Enemy (const StatusData& statusdata):Character(statusdata){
 //デストラクタ
 Enemy::~Enemy (){}
 
-void Enemy::getNumber(){
-    std::cout << status.id << std::endl;
-}
-
 //攻撃値の算出
 int Enemy::calculateAttackPoint(){
     return BattleRand(1, status.str);
@@ -51,7 +47,7 @@ void Enemy::attacked(int n) {
     status.hp = status.hp - damagepoint;
     std::cout << status.name << "に" << damagepoint << "のダメージ" << std::endl;
     
-    if (status.name <= 0) {
+    if (status.hp <= 0) {
         std::cout << name <<"は倒れた" << std::endl;
     }
 }
