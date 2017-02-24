@@ -1,5 +1,5 @@
 //
-//  battle_rund.cc
+//  battle_rand.cc
 //
 //  Created by 白川 岳史 on 2015/03/09.
 //  Copyright (c) 2015年 白川 岳史. All rights reserved.
