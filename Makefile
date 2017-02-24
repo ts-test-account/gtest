@@ -111,6 +111,30 @@ Main/fast:
 	$(MAKE) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/build
 .PHONY : Main/fast
 
+battle.o: battle.cc.o
+.PHONY : battle.o
+
+# target to build an object file
+battle.cc.o:
+	$(MAKE) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/battle.cc.o
+.PHONY : battle.cc.o
+
+battle.i: battle.cc.i
+.PHONY : battle.i
+
+# target to preprocess a source file
+battle.cc.i:
+	$(MAKE) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/battle.cc.i
+.PHONY : battle.cc.i
+
+battle.s: battle.cc.s
+.PHONY : battle.s
+
+# target to generate assembly for a file
+battle.cc.s:
+	$(MAKE) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/battle.cc.s
+.PHONY : battle.cc.s
+
 character.o: character.cc.o
 .PHONY : character.o
 
@@ -134,6 +158,30 @@ character.s: character.cc.s
 character.cc.s:
 	$(MAKE) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/character.cc.s
 .PHONY : character.cc.s
+
+enemy.o: enemy.cc.o
+.PHONY : enemy.o
+
+# target to build an object file
+enemy.cc.o:
+	$(MAKE) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/enemy.cc.o
+.PHONY : enemy.cc.o
+
+enemy.i: enemy.cc.i
+.PHONY : enemy.i
+
+# target to preprocess a source file
+enemy.cc.i:
+	$(MAKE) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/enemy.cc.i
+.PHONY : enemy.cc.i
+
+enemy.s: enemy.cc.s
+.PHONY : enemy.s
+
+# target to generate assembly for a file
+enemy.cc.s:
+	$(MAKE) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/enemy.cc.s
+.PHONY : enemy.cc.s
 
 main.o: main.cc.o
 .PHONY : main.o
@@ -240,9 +288,15 @@ help:
 	@echo "... Main"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... battle.o"
+	@echo "... battle.i"
+	@echo "... battle.s"
 	@echo "... character.o"
 	@echo "... character.i"
 	@echo "... character.s"
+	@echo "... enemy.o"
+	@echo "... enemy.i"
+	@echo "... enemy.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
