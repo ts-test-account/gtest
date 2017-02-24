@@ -52,7 +52,7 @@ void Player::attacked(int n) {
     std::cout << status.name << "に" << damagepoint << "のダメージ" << std::endl;
     
     if (status.hp <= 0) {
-        std::cout << name <<"は倒れた" << std::endl;
+        std::cout << status.name <<"は倒れた" << std::endl;
     }
 }
 
