@@ -15,4 +15,6 @@ add_executable(Main
   enemy.cc
   battle.h
   battle.cc
+  battle_rand.h
+  battle_rand.cc
 )
