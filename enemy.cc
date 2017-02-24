@@ -7,7 +7,7 @@
 
 #include "enemy.h"
 #include <iostream>
-#include "battle_rund.h"
+#include "battle_rand.h"
 
 
 //コンストラクタ

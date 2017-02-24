@@ -5,7 +5,7 @@
 //  Copyright (c) 2015年 白川 岳史. All rights reserved.
 //
 
-#include "battle_rund.h"
+#include "battle_rand.h"
 #include <random>
 
 int BattleRand(int startnumber, int endnumber){
